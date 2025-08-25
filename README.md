@@ -16,67 +16,110 @@ This project is a full-stack clone of Airbnb, designed to let users browse prope
 - **CI/CD:** GitHub Actions (lint → test → build → deploy)
 
 
-## UI/UX Design Plan
+## UI/UX Design Planning
 
-Design goals (from brief): intuitive booking flow; visual consistency; fast; mobile‑first.
+### Design Goals
 
-## Core Features
+- **Intuitive Booking Flow:** Ensure users can easily search, view, and book properties with minimal friction.
+- **Visual Consistency:** Maintain a cohesive look and feel across all pages and components.
+- **Fast Performance:** Optimize for quick load times and smooth interactions.
+- **Mobile-First:** Design for responsiveness and accessibility on all devices.
 
-- **Property Listing View:** Grid display of available properties with filters (location, dates, guests, price, type, rating).
-- **Listing Detail View:** Gallery, amenities, map, reviews, availability calendar, and booking form.
-- **Checkout:** Contact info, price breakdown, payment, and confirmation screen.
-- **Authentication:** Sign in/up, reset password.
-- **Account:** Trips, favorites, profile (phase 2: host dashboard).
+### Key Features to Implement
 
----
+- Property search and filtering
+- Detailed property viewing
+- Secure checkout process
+- User authentication and account management
 
-## Primary Colors & Typography
+### Primary Pages
 
-**Colors**
-- Primary: `#FF5A5F`
-- Secondary: `#008489`
-- Background: `#FFFFFF`
-- Text: `#222222`
-- Muted: `#717171`
+| Page                   | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| Property Listing View  | Grid display of available properties with filters for location, dates, etc. |
+| Listing Detailed View  | Complete property details, images, amenities, reviews, and booking form.    |
+| Simple Checkout View   | Streamlined payment and booking confirmation process.                       |
 
-**Typography**
-- Font: Circular (or Inter as drop-in)
-- Base: 16px
-- Headings: 24–32px
+### Color Styles
 
----
+- **Primary:** #FF5A5F
+- **Secondary:** #008489
+- **Background:** #FFFFFF
+- **Text:** #222222
+- **Secondary Text:** #717171
 
-## Component Library (Reusable Patterns)
+### Typography
 
-**Layout**
-- Navbar
-- Footer
-- Container
-- Grid
-- Breadcrumbs
+- **Font Family:** Circular (fallback: Inter, Arial, sans-serif)
+- **Font Weight:** 
+  - Headings: Bold (700)
+  - Body: Medium (500), Book (400)
+- **Font Size:** 
+  - Headings: 24px–32px
+  - Body: 16px
+  - Secondary Text: 14px
 
-**Inputs**
-- TextField
-- Select
-- DateRangePicker
-- Counter
-- Checkbox
-- Radio
-- Slider
+### Importance of Identifying Design Properties
 
-**Data Display**
-- PropertyCard
-- Rating
-- Badge
-- PriceTag
+Identifying design properties such as color styles and typography in a mockup is crucial for maintaining brand consistency, visual hierarchy, and accessibility. Clear documentation of these properties ensures that developers and designers can accurately translate the design into code, resulting in a cohesive and professional user interface. It also streamlines collaboration, reduces ambiguity, and helps deliver a polished product that meets user expectations.
 
-**Feedback**
-- Toast
-- Spinner
-- EmptyState
-- Modal
+## Project Roles and Responsibilities
 
-**Commerce**
-- PriceBreakdown
-- BookingForm
-- PaymentForm
+- **Project Manager:**  
+  Oversees the project timeline, coordinates team members, manages deliverables and resources, and ensures the project stays on track and meets deadlines.
+
+- **Frontend Developers:**  
+  Implement UI components, ensure responsive design, integrate APIs, and maintain code quality. Their work delivers a seamless, user-friendly interface for all users.
+
+- **Backend Developers:**  
+  Build APIs, manage the database schema, implement business logic, and ensure security and scalability. They provide reliable and efficient backend services for the application.
+
+- **Designers:**  
+  Create mockups, maintain the design system, ensure UX quality, and collaborate on branding. Designers guarantee a visually appealing and intuitive user experience.
+
+- **QA/Testers:**  
+  Write test cases, perform manual and automated testing, report bugs, and verify fixes. Their efforts maintain high product quality and minimize defects.
+
+- **DevOps Engineers:**  
+  Manage deployment, CI/CD pipelines, server infrastructure, and monitor system health. They ensure smooth releases and reliable application uptime.
+
+- **Product Owner:**  
+  Define requirements, prioritize features, represent stakeholder interests, and validate deliverables. The product owner aligns the product with business goals and user needs.
+
+- **Scrum Master:**  
+  Facilitate agile processes, remove blockers, organize meetings, and support team collaboration. The scrum master fosters an efficient, collaborative, and high-performing team dynamic.
+
+## UI Component Patterns
+
+This section outlines the reusable UI components planned for the Airbnb Clone, based on the [Figma design](https://www.figma.com/design/E2BRqdPcKkrnX6hLGPto8Z/Project-Airbnb?node-id=1-4&p=f&t=asmdI7OxfZ21cglv-0). These patterns ensure consistency, scalability, and maintainability across the application.
+
+### Planned Components
+
+- **Navbar:**  
+  A responsive navigation bar featuring logo, search input, navigation links, and user profile actions. Adapts for mobile and desktop layouts.
+
+- **Property Card:**  
+  Displays property image, title, location, price, rating, and quick actions (e.g., save, view details). Used in property listing grids.
+
+- **Footer:**  
+  Contains site links, contact information, social media icons, and legal disclaimers. Stays consistent across all pages.
+
+- **Search Filter Panel:**  
+  Allows users to filter properties by location, price, dates, amenities, and more. Collapsible on mobile devices.
+
+- **Booking Form:**  
+  Collects guest details, dates, and payment information. Includes validation and error handling.
+
+- **Image Gallery:**  
+  Interactive carousel for property images, supporting swipe and zoom features.
+
+- **Review List:**  
+  Displays user reviews with ratings, avatars, and timestamps.
+
+- **Modal/Dialog:**  
+  Used for login/signup, booking confirmation, and alerts. Accessible and reusable.
+
+- **Button Variants:**  
+  Primary, secondary, and icon buttons for consistent actions throughout the UI.
+
+These components will be built with reusability and accessibility in mind, following the design system defined in Figma
