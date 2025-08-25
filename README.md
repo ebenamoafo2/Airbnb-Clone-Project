@@ -18,7 +18,7 @@ This project is a full-stack clone of Airbnb, designed to let users browse prope
 
 ## UI/UX Design Planning
 
-### Design Goals
+
 
 - **Intuitive Booking Flow:** Ensure users can easily search, view, and book properties with minimal friction.
 - **Visual Consistency:** Maintain a cohesive look and feel across all pages and components.
